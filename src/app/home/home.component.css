@@ -1,0 +1,98 @@
+p-button {
+    margin: 3%;
+}
+
+/* p-table {
+    width: 100%;
+    @media only screen and (max-width: 1200px) {
+        width: 100%;
+    }
+} */
+
+.form-container {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+  }
+  .AA{
+   position: absolute;
+   margin-left: 12%;
+   margin-top: -165px;
+  text-align: center;
+  }
+  .BB{
+    position: absolute;
+    margin-left: 90%;
+   margin-top: -165px;
+   }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  img{
+    height: 135px;
+    margin-bottom: 15%;
+    margin-left: 5%;
+  }
+  
+  .SS{
+    position: fixed;
+     z-index: 1000;
+       width: 100%;
+       top: 18%;
+       margin-left: 83%;
+  }
+  
+  /* img{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 15%;
+    border-radius: 50%;
+    margin-left: 5%;
+  } */
+ td{
+  font-size: large;
+  font-weight: bold;
+  text-align: justify;
+ }
+ 
+  input[type="text"],
+  input[type="number"],
+  input[type="file"],
+  input[type="date"] {
+    width: 100%;
+    height: 50px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  /* p-button{
+    @media only screen and (max-width: 768px) {
+      margin-left: 10%;
+      .some-element {
+        width: 90px;
+            }
+    }
+  } */
+  

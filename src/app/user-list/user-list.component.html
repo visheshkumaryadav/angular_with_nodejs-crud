@@ -1,0 +1,47 @@
+<!-- <p-dialog header="Add Student" [(visible)]="visible" [style]="{width: '50vw'}">
+  <form [formGroup]="addstudent" (ngSubmit)="onSubmit1()">
+      <div>
+          <label for="Student_Name">Student Name</label>
+          <input type="text" id="Student_Name" formControlName="Student_Name">
+          <div *ngIf="addstudent.get('Student_Name')?.errors && addstudent.get('Student_Name')?.touched">
+              <span *ngIf="addstudent.get('Student_Name')?.hasError('required')">Student_Name is required</span>
+        </div>
+      </div>
+      <div>
+          <label for="Class">Class</label>
+          <input type="text" id="Class" formControlName="Class">
+          <div *ngIf="addstudent.get('Class')?.errors && addstudent.get('Class')?.touched">
+              <span *ngIf="addstudent.get('Class')?.hasError('required')">Class is required</span>
+        </div>
+      </div>
+      <div>
+          <label for="Subject">Subject</label>
+          <input type="text" id="Subject" formControlName="Subject">
+          <div *ngIf="addstudent.get('Subject')?.errors && addstudent.get('Subject')?.touched">
+              <span *ngIf="addstudent.get('Subject')?.hasError('required')">Subject is required</span>
+        </div>
+      </div>
+      <div>
+          <label for="Address">Address</label>
+          <input type="text" id="Address" formControlName="Address">
+          <div *ngIf="addstudent.get('Address')?.errors && addstudent.get('Address')?.touched">
+              <span *ngIf="addstudent.get('Address')?.hasError('required')">Address is required</span>
+        </div>
+      </div>
+      <div>
+          <label for="Pin_Code">Pin_Code</label>
+          <input type="number" id="Pin_Code" formControlName="Pin_Code">
+          <div *ngIf="addstudent.get('Pin_Code')?.errors && addstudent.get('Pin_Code')?.touched">
+              <span *ngIf="addstudent.get('Pin_Code')?.hasError('required')">Pin_Code is required</span>
+        </div>
+      </div>
+      <div>
+          <label for="Date_of_Birth">Date_of_Birth</label>
+          <input type="date" id="Date_of_Birth" formControlName="Date_of_Birth">
+          <div *ngIf="addstudent.get('Date_of_Birth')?.errors && addstudent.get('Date_of_Birth')?.touched">
+              <span *ngIf="addstudent.get('Date_of_Birth')?.hasError('required')">Class is required</span>
+        </div>
+      </div><br>
+      <button mat-raised-button color="primary" type="submit" [disabled]="addstudent.invalid">Add Student</button>
+  </form>
+</p-dialog><br> -->

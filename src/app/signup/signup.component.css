@@ -1,0 +1,41 @@
+.container {
+	max-width: 410px;
+	margin: 2% auto;
+	padding: 2%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+  }
+  
+  .form-group {
+	margin-bottom: 15px;
+  }
+  
+  label {
+	font-weight: bold;
+  }
+input{
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+  }
+  
+  .error-message {
+	color: red;
+  }
+  
+  .btn {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+  .btn:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+  }
+  

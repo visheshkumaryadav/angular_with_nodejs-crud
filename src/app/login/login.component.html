@@ -1,0 +1,29 @@
+<!-- login.component.html -->
+<p-toast></p-toast>
+<div class="container">
+  <div>
+    <h2>Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" formControlName="email">
+        <div *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched">
+          <span class="error-message" *ngIf="loginForm.get('email')?.hasError('required')">Email is required</span>
+          <span class="error-message" *ngIf="loginForm.get('email')?.hasError('email')">Invalid email</span>
+        </div>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password">
+        <div *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched">
+          <span class="error-message" *ngIf="loginForm.get('password')?.hasError('required')">Password is
+            required</span>
+        </div>
+      </div><br>
+      <!-- <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">Login</button><br><br> -->
+      <button type="submit" pButton pRipple label="Login" class="p-button-info"
+        [disabled]="loginForm.invalid"></button><br><br>
+      <p>Create New User Account?<a routerLink="signup"> Signup</a></p>
+    </form>
+  </div>
+</div>

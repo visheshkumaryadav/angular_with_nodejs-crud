@@ -1,0 +1,72 @@
+<p-toast></p-toast>
+<p>
+  <mat-toolbar color="primary">
+
+    <span routerLink="/home/home" style="cursor: pointer;">User List</span>
+    <span class="example-spacer"></span>
+    <p-button (click)="logout()" label="Logout"></p-button>
+  </mat-toolbar>
+</p><br><br><br>
+<p-button (click)="showDialog()" icon="pi pi-plus" label="Add Student" style="margin-left: 5%;"></p-button>
+<div class="form-container">
+  <p-dialog header="Add Student" [(visible)]="visible" [style]="{width: '50vw'}">
+    <form [formGroup]="addstudent" (ngSubmit)="onSubmit1()">
+      <div>
+        <label for="sname">Image</label>
+        <input type="file" (change)="selectfile($event)">
+        <div *ngIf="addstudent.get('sname')?.errors && addstudent.get('image')?.touched">
+        </div>
+      </div>
+      <div>
+        <label for="sname">Student Name</label>
+        <input type="text" id="sname" formControlName="sname">
+        <div *ngIf="addstudent.get('sname')?.errors && addstudent.get('sname')?.touched">
+          <span class="error-message" *ngIf="addstudent.get('sname')?.hasError('required')">Student_Name is
+            required</span>
+        </div>
+      </div>
+      <div>
+        <label for="Class">Class</label>
+        <input type="text" id="Class" formControlName="Class">
+        <div *ngIf="addstudent.get('Class')?.errors && addstudent.get('Class')?.touched">
+          <span class="error-message" *ngIf="addstudent.get('Class')?.hasError('required')">Class is required</span>
+        </div>
+      </div>
+      <div>
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" formControlName="subject">
+        <div *ngIf="addstudent.get('subject')?.errors && addstudent.get('subject')?.touched">
+          <span class="error-message" *ngIf="addstudent.get('subject')?.hasError('required')">Subject is
+            required</span>
+        </div>
+      </div>
+      <div>
+        <label for="address">Address</label>
+        <input type="text" id="address" formControlName="address">
+        <div *ngIf="addstudent.get('address')?.errors && addstudent.get('address')?.touched">
+          <span class="error-message" *ngIf="addstudent.get('address')?.hasError('required')">Address is
+            required</span>
+        </div>
+      </div>
+      <div>
+        <label for="pcode">Pin_Code</label>
+        <input type="number" id="pcode" formControlName="pcode" onkeypress="if(this.value.length==6) return false;" required>
+        <div *ngIf="addstudent.get('pcode')?.errors && addstudent.get('pcode')?.touched">
+          <span class="error-message" *ngIf="addstudent.get('pcode')?.hasError('required')">pin code is
+            required</span>
+        </div>
+       
+
+      </div>
+      <div>
+        <label for="dob">Date_of_Birth</label>
+        <input type="date" id="dob" formControlName="dob">
+        <div *ngIf="addstudent.get('dob')?.errors && addstudent.get('dob')?.touched">
+          <span class="error-message" *ngIf="addstudent.get('dob')?.hasError('required')">Class is
+            required</span>
+        </div>
+      </div><br>
+      <button mat-raised-button color="primary" type="submit" [disabled]="addstudent.invalid">Add Student</button>
+    </form>
+  </p-dialog>
+</div>

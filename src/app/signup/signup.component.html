@@ -1,0 +1,53 @@
+<p-toast></p-toast>
+<div class="container">
+  <h2>Signup</h2>
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">User Name</label>
+      <input type="text" id="username" formControlName="username">
+      <div *ngIf="signupForm.get('username')?.errors && signupForm.get('username')?.touched">
+        <span class="error-message" *ngIf="signupForm.get('username')?.hasError('required')">Username is required</span>
+      </div>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" formControlName="email">
+      <div *ngIf="signupForm.get('email')?.errors && signupForm.get('email')?.touched">
+        <span class="error-message" *ngIf="signupForm.get('email')?.hasError('required')">Email is required</span>
+        <span class="error-message" *ngIf="signupForm.get('email')?.hasError('email')">Invalid email</span>
+      </div>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password">
+      <div *ngIf="signupForm.get('password')?.errors && signupForm.get('password')?.touched">
+        <span class="error-message" *ngIf="signupForm.get('password')?.hasError('required')">Password is required</span>
+      </div>
+    </div>
+    <div>
+      <label for="designation">Designation</label>
+      <input type="text" id="designation" formControlName="designation">
+      <div *ngIf="signupForm.get('designation')?.errors && signupForm.get('designation')?.touched">
+        <span class="error-message" *ngIf="signupForm.get('designation')?.hasError('required')">Designation is
+          required</span>
+      </div>
+    </div>
+    <div>
+      <label for="email">Location</label>
+      <input type="text" id="location" formControlName="location">
+      <div *ngIf="signupForm.get('location')?.errors && signupForm.get('location')?.touched">
+        <span class="error-message" *ngIf="signupForm.get('location')?.hasError('required')">Location is required</span>
+      </div>
+    </div>
+    <div>
+      <label for="Image">Image</label>
+      <input (change)="selectfile($event)" type="file">
+      <div *ngIf="signupForm.get('image')?.errors && signupForm.get('image')?.touched">
+        <span class="error-message" *ngIf="signupForm.get('image')?.hasError('required')">image is required</span>
+      </div>
+    </div><br>
+    <!-- <button mat-raised-button color="primary" type="submit" [disabled]="signupForm.invalid">Signup</button><br><br> -->
+    <button type="submit" pButton pRipple [disabled]="signupForm.invalid" label="Signup" class="p-button-info"></button><br><br>
+    <p>User already exist?<a href=""> login</a></p>
+  </form>
+</div>
